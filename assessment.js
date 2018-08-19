@@ -31,7 +31,17 @@
         paragraph.innerText = result;
         resultDivided.appendChild(paragraph);
         // TODO ツイートエリアの作成        
-        //removeAllChildren(tweetDivId);
+        removeAllChildren(tweetDivId);
+        const anchor = document.createElement('a');
+        const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag=あなたの良いところ&ref_src=twsrc%5Etfw&text='
+        + encodeURIComponent(result);
+        anchor.setAttribute('href', hrefValue);
+        anchor.className = 'twitter-hashtag-button';
+        anchor.innerText = '#あなたの良いところ';
+        // anchor.text = 'hoge';
+        anchor.related = 'tanaka_hisanori';
+        tweetDivId.appendChild(anchor);
+        twttr.widgets.load();
     }
 
     const answers = [
