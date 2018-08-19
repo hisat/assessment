@@ -6,7 +6,7 @@
     const tweetDivId = document.getElementById('tweet-area');
 
     /**
-     * 指定した要素の子要素をすべて削除する
+     * 指定した要素の子要素をすべて削除する。コメントを追加
      * @param (HTML Element) element HTML の要素
      */
     function removeAllChildren(element) {
